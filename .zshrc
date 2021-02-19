@@ -118,6 +118,7 @@ alias c="clear"
 
 # dotfiles
 alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# Usage: cfgall "message"
 cfgall() {
   cfg add -u
   cfg commit -m "$@"
