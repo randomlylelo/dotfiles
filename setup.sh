@@ -10,6 +10,13 @@ cfg config --local status.showUntrackedFiles no
 echo "Installation of config files done."
 echo "Starting installation of regular packages."
 
+# Setup PIKAUR to install AUR Packages -- https://github.com/actionless/pikaur
+sudo pacman -S --needed base-devel git
+git clone https://aur.archlinux.org/pikaur.git
+cd pikaur
+makepkg -fsri
+cd $HOME
+
 # Start installation of regular packages.
 
 
