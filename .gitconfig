@@ -3,3 +3,5 @@
 	name = Leo
 [init]
 	defaultBranch = main
+[credential]
+	helper = store
