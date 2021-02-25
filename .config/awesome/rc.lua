@@ -282,7 +282,7 @@ awful.screen.connect_for_each_screen(function(s)
 
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            -- wibox.widget.systray(), -- uncomment if u want systray but relatively useless. Use/make widgets instead.
+            wibox.widget.systray(), -- uncomment if u want systray but relatively useless. Use/make widgets instead.
             l_sep,
             brightness_widget{
                 program="brightnessctl",
