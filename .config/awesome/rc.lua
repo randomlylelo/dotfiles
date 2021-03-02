@@ -308,8 +308,8 @@ end)
 -- {{{ Mouse bindings
 root.buttons(gears.table.join(
     -- awful.button({ }, 3, function () mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewnext),
-    awful.button({ }, 5, awful.tag.viewprev)
+    -- awful.button({ }, 4, awful.tag.viewnext),
+    -- awful.button({ }, 5, awful.tag.viewprev)
 ))
 -- }}}
 
@@ -652,3 +652,13 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Autorun stuff
 awful.spawn.with_shell("~/.config/awesome/startup.sh")
+
+local countdown = gears.timer {
+    timeout = 600, -- In seconds, 600s is 10mins
+    autostart = true,
+    call_now = false,
+    callback = function(t)
+        awful.spawn.with_shell("feh --bg-scale --randomize /usr/share/backgrounds")
+        naughty.notify({text="Changed Wallpaper"})
+    end
+}

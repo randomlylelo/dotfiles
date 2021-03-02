@@ -33,4 +33,4 @@ function run {
 # Autostart "picom -b"
 run picom -b
 run riseup-vpn
-run nitrogen --restore
+run feh --bg-scale --randomize /usr/share/backgrounds
