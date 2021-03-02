@@ -125,3 +125,6 @@ cfgall() {
   cfg push -u origin main
 }
 alias status='cfg status'
+
+# Run neofetch right away
+neofetch
