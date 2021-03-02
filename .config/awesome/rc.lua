@@ -658,7 +658,7 @@ local countdown = gears.timer {
     autostart = true,
     call_now = false,
     callback = function(t)
-        awful.spawn.with_shell("feh --bg-scale --randomize /usr/share/backgrounds")
+        awful.spawn.with_shell("feh --bg-scale --randomize /$HOME/Wallpapers")
         naughty.notify({text="Changed Wallpaper"})
     end
 }
