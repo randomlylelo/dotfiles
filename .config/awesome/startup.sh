@@ -33,3 +33,4 @@ function run {
 # Autostart "picom -b"
 run picom -b
 run riseup-vpn
+run nitrogen --restore
