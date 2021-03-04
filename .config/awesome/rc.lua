@@ -654,11 +654,10 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("~/.config/awesome/startup.sh")
 
 local countdown = gears.timer {
-    timeout = 600, -- In seconds, 600s is 10mins
+    timeout = 1800, -- In seconds, 1800s is 30mins
     autostart = true,
     call_now = false,
     callback = function(t)
         awful.spawn.with_shell("feh --bg-scale --randomize /$HOME/wallpapers")
-        naughty.notify({text="Changed Wallpaper"})
     end
 }
