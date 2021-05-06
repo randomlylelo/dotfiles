@@ -18,7 +18,8 @@ makepkg -fsri
 cd $HOME
 
 # Start installation of regular packages.
-
+# Install Ruby on Rails Depencies
+sudo pacman -S ruby sqlite nodejs yarn
 
 # Install Fonts
 pacman -S otf-overpass
