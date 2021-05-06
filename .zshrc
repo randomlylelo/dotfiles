@@ -90,8 +90,12 @@ fi
 
 # Global Variables.
 export LANG='en_US.UTF-8'
+
+# Add Ruby to Path
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+
 # Customize Path, add ':' after each one.
-export PATH=$PATH
+export PATH="$PATH:$GEM_HOME/bin"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
