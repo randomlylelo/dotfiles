@@ -1,0 +1,21 @@
+gg - go top
+G - go bottom
+i - insert before
+a - insert after <- use this over i
+o - insert next line
+	combos: just make new line with o then double esc.
+[/] - go up/down a code block.
+dd - delete line
+
+COMMANDS:
+:w - write
+:q - quit
+:q! - quit w/o saving
+:wq - write + quit
+:Ex - file explorer
+
+FOR VSCODE: 
+Explorer - Ctrl+Shift+e
+Terminal - Ctrl+`
+Commenting - Ctrl+/
+
