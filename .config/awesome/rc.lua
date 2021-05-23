@@ -346,6 +346,9 @@ globalkeys = gears.table.join(
     -- Custom keybindings.
     awful.key({ modkey }, "t", function () awful.spawn.with_shell("chromium")    end,
               {description = "open a browser", group = "custom"}),
+    
+    awful.key({ modkey }, "b", function () awful.spawn.with_shell("feh --bg-scale --randomize /$HOME/wallpapers")    end,
+              {description = "Change background", group = "custom"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
