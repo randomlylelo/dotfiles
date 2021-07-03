@@ -33,4 +33,5 @@ function run {
 # Autostart "picom -b"
 run picom -b
 run riseup-vpn
+run keepassxc
 run feh --bg-scale --randomize /$HOME/wallpapers
