@@ -34,6 +34,7 @@ git clone https://github.com/randomlylelo/apw $HOME/.config/awesome/apw
 
 # Install default stuff.
 pacman -S alacritty
+pacman -S keepassxc
 
 # Install patched dmenu
 git clone https://github.com/randomlylelo/custom_patched_dmenu
