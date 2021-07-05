@@ -97,6 +97,9 @@ export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 # Customize Path, add ':' after each one.
 export PATH="$PATH:$GEM_HOME/bin"
 
+# GPG Key
+export GPG_TTY=$(tty)
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
