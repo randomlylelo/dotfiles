@@ -122,7 +122,7 @@ alias nvidia-disable="sudo mv /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.con
 # Custom aliases
 alias c="clear"
 alias shutdown="shutdown now"
-alias sleepnow="systemctl suspend"
+alias sleepnow="xautolock -locknow; systemctl suspend"
 alias logout="systemctl restart sddm"
 
 # dotfiles
