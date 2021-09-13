@@ -1,8 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ME="/home/zhang"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/zhang/.oh-my-zsh"
+export ZSH="$ME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -95,7 +96,7 @@ export LANG='en_US.UTF-8'
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 
 # Customize Path, add ':' after each one.
-export PATH="$PATH:$GEM_HOME/bin"
+export PATH="$PATH:$GEM_HOME/bin:$ME/.local/bin"
 
 # GPG Key
 export GPG_TTY=$(tty)

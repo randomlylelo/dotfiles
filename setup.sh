@@ -10,11 +10,14 @@ cfg config --local status.showUntrackedFiles no
 echo "Installation of config files done."
 echo "Starting installation of regular packages."
 
-# Setup PIKAUR to install AUR Packages -- https://github.com/actionless/pikaur
-sudo pacman -S --needed base-devel git
-git clone https://aur.archlinux.org/pikaur.git
-cd pikaur
-makepkg -fsri
+# Install haskell stack tool to build aura.
+echo "Installing haskell to build aura."
+sudo pacman -S ghc cabal-install stack
+echo "Building AURA from source."
+# https://github.com/fosskers/aura
+git clone https://github.com/fosskers/aura.git
+cd aura
+stack install -- aura
 cd $HOME
 
 # Start installation of regular packages.
@@ -51,5 +54,6 @@ cp $HOME/zshcustom/customtheme.zsh-theme $HOME/.oh-my-zsh/custom/themes
 rm -r $HOME/zshcustom/
 cfg update-index --skip-worktree ~/zshcustom/customtheme.zsh-theme
 echo
-echo "Note make sure to update 'ZSH=\"/home/zhang/.oh-my-zsh\"' if user name is different in .zshrc file."
+echo "Note make sure to update 'ME=\"/home/zhang\"' if user name is different in .zshrc file."
+echo "I.E. changing from zhang to leo would be ME=\"/home/leo\""
 echo
