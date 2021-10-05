@@ -19,3 +19,5 @@ Explorer - Ctrl+Shift+e
 Terminal - Ctrl+`
 Commenting - Ctrl+/
 
+Useful Shit:
+Ctrl+V = Multiline select, after selecting the lines, then press I and type your text, escape twice, will paste on everyline.
