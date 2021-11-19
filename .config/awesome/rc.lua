@@ -350,7 +350,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "b", function () awful.spawn.with_shell("feh --bg-scale --randomize /$HOME/wallpapers")    end,
               {description = "change background", group = "custom"}),
 
-    awful.key({ modkey }, "l", function () awful.spawn.with_shell("xautolock -locknow; systemctl suspend")    end,
+    awful.key({ modkey, "Shift" }, "l", function () awful.spawn.with_shell("xautolock -locknow; systemctl suspend")    end,
               {description = "lock screen & sleep", group = "custom-lock"}),
 
     -- Layout manipulation
