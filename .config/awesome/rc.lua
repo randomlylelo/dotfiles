@@ -411,7 +411,7 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.spawn.with_shell("dmenu_run -c -l 20 -hp \"chromium,discord\"") end,
+    awful.key({ modkey },            "r",     function () awful.spawn.with_shell("dmenu_run -c -l 20 -hp \"chromium,discord,firefox\"") end,
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
