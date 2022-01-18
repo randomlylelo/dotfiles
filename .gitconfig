@@ -12,3 +12,7 @@
 	gpgsign = true
 [tag]
 	gpgsign = true
+[core]
+	autocrlf = input
+[pull]
+	rebase = false

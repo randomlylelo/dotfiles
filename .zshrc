@@ -92,9 +92,6 @@ fi
 # Global Variables.
 export LANG='en_US.UTF-8'
 
-# Add Ruby to Path
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-
 # Customize Path, add ':' after each one.
 export PATH="$PATH:$GEM_HOME/bin:$ME/.local/bin"
 
@@ -138,3 +135,6 @@ alias status='cfg status'
 
 # Run neofetch right away
 neofetch
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
