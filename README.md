@@ -4,6 +4,7 @@ https://www.atlassian.com/git/tutorials/dotfiles
 
 ## Todo
 - [ ] Setup script.
+- [ ] Switch to a dotfiles tool like https://www.chezmoi.io/
 
 Make sure to add\
 `cfg update-index --skip-worktree ~/zshcustom/customtheme.zsh-theme`\
