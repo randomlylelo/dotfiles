@@ -20,6 +20,8 @@ cd aura
 stack install -- aura
 cd $HOME
 
+# TODO: install rxfetch
+
 # Start installation of regular packages.
 # Install Ruby on Rails Depencies
 sudo pacman -S ruby sqlite nodejs yarn
@@ -39,6 +41,7 @@ git clone https://github.com/randomlylelo/apw $HOME/.config/awesome/apw
 pacman -S alacritty
 pacman -S keepassxc
 pacman -S xautolock i3lock
+pacman -S conky
 
 # Install patched dmenu
 git clone https://github.com/randomlylelo/custom_patched_dmenu
