@@ -53,6 +53,13 @@ cp $HOME/zshcustom/customtheme.zsh-theme $HOME/.oh-my-zsh/custom/themes
 # Remove custom theme
 rm -r $HOME/zshcustom/
 cfg update-index --skip-worktree ~/zshcustom/customtheme.zsh-theme
+
+echo "Cloning custom plugins"
+cd $HOME/.oh-my-zsh/custom/plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+cd $HOME
+
 echo
 echo "Note make sure to update 'ME=\"/home/zhang\"' if user name is different in .zshrc file."
 echo "I.E. changing from zhang to leo would be ME=\"/home/leo\""
