@@ -53,4 +53,5 @@ function run {
 run picom -b
 run riseup-vpn
 run keepassxc
+run conky
 run feh --bg-scale --randomize /$HOME/wallpapers
