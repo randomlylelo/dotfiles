@@ -15,3 +15,6 @@ zshcustom folder is there because I can't seem to upload `.oh-my-zsh/custom/them
 Make sure to install `cups avahi` then ENABLE AND START `cups.service` & START `avahi-daemon.service`\
 To set up printer, make sure to use `ipd://(PRINTERNAME)/BINARY_P1` not `dnssd://(blah)`\
 You can change this in `system-config-printer`.
+
+For monitor scaling, change .xResources, make it in increments of 96. https://wiki.archlinux.org/title/HiDPI#X_Resources
+Right now at a 1.25 scale so 120. Usually, everything here is configured to 144, which is 1.5 scale. THe widgets are messed up a bit right now unless changed but oh well.
