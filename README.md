@@ -18,3 +18,7 @@ You can change this in `system-config-printer`.
 
 For monitor scaling, change .xResources, make it in increments of 96. https://wiki.archlinux.org/title/HiDPI#X_Resources
 Right now at a 1.25 scale so 120. Usually, everything here is configured to 144, which is 1.5 scale. THe widgets are messed up a bit right now unless changed but oh well.
+
+For conky:
+https://askubuntu.com/questions/685045/ssd-temp-with-conky
+Make sure to add the sudoers file etc.
