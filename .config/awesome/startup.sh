@@ -31,6 +31,7 @@ if xrandr | grep -q "HDMI-0 connected"; then
 
     # MONITOR ORDER
     xrandr --output HDMI-0 --right-of eDP-1-0
+    xrandr --output HDMI-0 --right-of eDP-1-1
 
     # PRIMARY MONITOR
     # This sets your laptop monitor as your primary monitor.
@@ -39,6 +40,18 @@ if xrandr | grep -q "HDMI-0 connected"; then
     # Increase zoom
     # xrandr --output HDMI-0 --scale 1x1
     # xrandr --output eDP-1-0 --scale 1.2x1.2
+fi
+
+# Triple montior.
+if xrandr | grep -q "DP-3 connected"; then
+  xrandr --output DP-3 --mode 1920x1080 --rate 60
+  xrandr --output eDP-1-0  --mode 1920x1080 --rate 144
+
+  xrandr --output DP-3 --left-of eDP-1-0
+  # In triple monitor eDP-1-0 becomes eDP-1-1, honestly could be better but idc.
+  xrandr --output DP-3 --left-of eDP-1-1
+
+  xrandr --output eDP-1-0 --primary
 fi
 
 # Autorun function, checks if program is already running, if not start
@@ -54,4 +67,10 @@ run picom -b
 run riseup-vpn
 run keepassxc
 run conky
+# Start activity watch w/o systray
+run aw-server
+run aw-watcher-afk
+run aw-watcher-window
+
+# set background
 run feh --bg-scale --randomize /$HOME/wallpapers
