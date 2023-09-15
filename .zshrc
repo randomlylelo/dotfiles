@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export ME="/home/zhang"
+export ME="/home/leo"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$ME/.oh-my-zsh"
@@ -78,6 +78,7 @@ plugins=(
   extract
   zsh-syntax-highlighting
   zsh-autosuggestions
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -129,6 +130,7 @@ alias c="clear"
 alias shutdown="shutdown now"
 alias sleepnow="xautolock -locknow; systemctl suspend"
 alias logout="systemctl restart sddm"
+alias rm="rm -i"
 
 # dotfiles
 alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -140,8 +142,29 @@ cfgall() {
 }
 alias status='cfg status'
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# export PATH="$PATH:$HOME/.rvm/bin"
+
+# TODO: this is probs causing a slowdown.
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/home/leo/mambaforge/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/home/leo/mambaforge/etc/profile.d/conda.sh" ]; then
+#        . "/home/leo/mambaforge/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/home/leo/mambaforge/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+#
+#if [ -f "/home/leo/mambaforge/etc/profile.d/mamba.sh" ]; then
+#    . "/home/leo/mambaforge/etc/profile.d/mamba.sh"
+#fi
+## <<< conda initialize <<<
+#conda deactivate
+
 # Run neofetch right away
 rxfetch
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"

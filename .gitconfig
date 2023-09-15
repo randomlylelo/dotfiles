@@ -1,7 +1,7 @@
 [user]
 	email = 38267386+randomlylelo@users.noreply.github.com
 	name = Leo
-	signingkey = 16EB7FB423156DC9
+	signingkey = 003E06BB273CB664
 [init]
 	defaultBranch = main
 [credential]
@@ -16,3 +16,5 @@
 	autocrlf = input
 [pull]
 	rebase = false
+[push]
+	autoSetupRemote = true

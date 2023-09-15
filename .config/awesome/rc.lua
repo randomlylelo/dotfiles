@@ -14,6 +14,7 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local HOME = os.getenv("HOME")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -45,7 +46,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/zhang/.config/awesome/theme.lua")
+beautiful.init(HOME .. "/.config/awesome/theme.lua")
 
 -- Custom awesome libaries
 -- This is a widget, needs to be after beautiful init in order for theming to work.
@@ -223,7 +224,7 @@ awful.screen.connect_for_each_screen(function(s)
         widget_template = {
             {
                 wibox.widget.base.make_widget(),
-                forced_height = 5,
+                forced_height = 2,
                 id            = 'background_role',
                 widget        = wibox.container.background,
             },
@@ -236,7 +237,7 @@ awful.screen.connect_for_each_screen(function(s)
                                 id     = 'clienticon',
                                 widget = awful.widget.clienticon,
                             },
-                            margins = 5,
+                            margins = 6,
                             widget  = wibox.container.margin,
                         },
                         {
@@ -248,12 +249,12 @@ awful.screen.connect_for_each_screen(function(s)
                         layout = wibox.layout.fixed.horizontal,
                     },
                     -- Min width
-                    width    = 300,
+                    width    = 200,
                     strategy = "min",
                     layout   = wibox.layout.constraint,
                 },
                 -- Max width, aka make all look the same
-                width    = 300,
+                width    = 200,
                 strategy = "max",
                 layout   = wibox.layout.constraint
             },
@@ -348,6 +349,9 @@ globalkeys = gears.table.join(
               {description = "open a browser", group = "custom"}),
     
     awful.key({ modkey }, "b", function () awful.spawn.with_shell("feh --bg-scale --randomize /$HOME/wallpapers")    end,
+              {description = "change background", group = "custom"}),
+
+    awful.key({ modkey }, "y", function () awful.spawn.with_shell("obsidian")    end,
               {description = "change background", group = "custom"}),
 
     awful.key({ modkey, "Shift" }, "l", function () awful.spawn.with_shell("xautolock -locknow; systemctl suspend")    end,

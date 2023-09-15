@@ -13,6 +13,7 @@ local theme = {}
 
 -- "sans 8" -- default
 -- "Jetbrains Mono" -- wanna use but god damn makes everything 10x bigger.
+-- theme.font          = "Jetbrains Mono"
 theme.font          = "Overpass"
 
 theme.bg_normal     = "#222222"
@@ -27,7 +28,7 @@ theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(1)
+theme.border_width  = dpi(0)
 theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"
 theme.border_marked = "#91231c"

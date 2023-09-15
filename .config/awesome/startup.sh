@@ -2,6 +2,7 @@
 
 # Check dual monitor setup
 # Check if HDMI is plugged in, if so then run dual monitor script.
+# 4k
 if xrandr | grep -q "HDMI-0 connected"; then
     # RESOLUTION SETTINGS
     # This sets your HDMI Port Res
@@ -12,6 +13,7 @@ if xrandr | grep -q "HDMI-0 connected"; then
 
     # MONITOR ORDER
     xrandr --output HDMI-0 --right-of eDP-1-0
+    xrandr --output HDMI-0 --right-of eDP-1-1
 
     # PRIMARY MONITOR
     # This sets your laptop monitor as your primary monitor.
@@ -22,6 +24,28 @@ if xrandr | grep -q "HDMI-0 connected"; then
     # xrandr --output HDMI-0 --scale 1x1
     # xrandr --output eDP-1-0 --scale 1.2x1.2
 fi
+
+# Not 4k
+# if xrandr | grep -q "HDMI-0 connected"; then
+#     # RESOLUTIONSETTINGS
+#     # This sets your HDMI Port Res
+#     xrandr --output HDMI-0 --mode 1920x1080 --rate 60
+
+#     if xrandr | grep -q "eDP-1-0 connected"; then
+#         # This sets your laptop monitor to its best resolution.
+#         xrandr --output eDP-1-0  --mode 1920x1080 --rate 144
+
+#         # MONITOR ORDER
+#         xrandr --output HDMI-0 --right-of eDP-1-0
+
+#         # PRIMARY MONITOR
+#         xrandr --output eDP-1-0 --primary
+#     else
+#         xrandr --output eDP-1-1  --mode 1920x1080 --rate 144
+#         xrandr --output HDMI-0 --right-of eDP-1-1
+#         xrandr --output eDP-1-1 --primary
+#     fi
+# fi
 
 # Dual monitor script for small screen.
 # if xrandr | grep -q "HDMI-0 connected"; then
@@ -64,15 +88,24 @@ function run {
   fi
 }
 
+# polkit
+run /usr/lib/polkit-kde-authentication-agent-1
+
 # Autostart "picom -b"
 run picom -b
-run riseup-vpn
+# run riseup-vpn
 run keepassxc
 run conky
-# Start activity watch w/o systray
-run aw-server
-run aw-watcher-afk
-run aw-watcher-window
 
 # set background
 run feh --bg-scale --randomize /$HOME/wallpapers
+
+# Start activity watch w/ systray
+run aw-qt
+
+run nextcloud
+
+# Start activity watch w/o systray
+# run aw-server-rust
+# run aw-watcher-afk
+# run aw-watcher-window
